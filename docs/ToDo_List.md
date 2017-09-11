@@ -23,7 +23,7 @@ write the cli
 write the self documentation
 
 Refactor top level git repo for project
-Add Travis CI and unit Testing
+Change travis to support python 3.X versions
 Check versions of python to be supported
 
 
