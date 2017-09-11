@@ -1,6 +1,7 @@
+from interface import ResponseInterface
 
 
-class Response(object):
+class Response(ResponseInterface):
 
     def calculate_content_length(self):
         return str(len(self.body))

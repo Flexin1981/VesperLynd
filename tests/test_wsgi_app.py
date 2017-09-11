@@ -14,4 +14,3 @@ class TestWsgiAppInstantiation(unittest.TestCase):
     def test_wsgi_app_raises_error_when_routing_engine_does_not_impliment_interface(self):
         with self.assertRaises(TypeError):
             self.app = WsgiApp("")
-

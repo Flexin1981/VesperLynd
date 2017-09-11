@@ -1,6 +1,7 @@
 from app.wsgi_app import WsgiApp
 from routing.routing_engine import RoutingEngine, HostRoute, UriRoute
 from views.api_view import ApiView
+from http.response import Response
 
 
 def welcome():
@@ -16,8 +17,13 @@ def working_routing2():
 
 class View(ApiView):
 
-    def get(self):
-        return '{"class": "view"}'
+    def get(self, request):
+        response = Response()
+
+        response.status = "200 OK"
+        response.body = '{"class": "view"}'
+        response.headers = [("Content-Type", "application/json")]
+        return response
 
 
 routing = RoutingEngine()

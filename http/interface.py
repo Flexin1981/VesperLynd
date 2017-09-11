@@ -1,6 +1,6 @@
 
 
-class Response(object):
+class ResponseInterface(object):
 
     def render(self):
-        raise NotImplementedError("respnse must impliment the render method.")
+        raise NotImplementedError("respnse must implement the render method.")

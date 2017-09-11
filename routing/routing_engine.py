@@ -12,7 +12,7 @@ class RoutingEngine(RoutingInterface):
             Return the callable that matches the incoming host and uri pattern
         :param host:
         :param uri:
-        :return:
+        :return: None
         """
         for route in self.routes:
             if route.is_match(host):
